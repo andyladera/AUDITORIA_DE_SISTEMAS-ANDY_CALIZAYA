@@ -1,0 +1,248 @@
+=== RESUMEN ===
+Total reglas evaluadas: 639
+  Aprobadas (pass): 128
+  Fallidas (fail): 6
+  No aplicable: 264
+  No seleccionadas: 241
+
+
+=== TODAS LAS REGLAS FALLIDAS CON DETALLE ===
+(Total: 6 reglas fallidas)
+
+================================================================================
+1. ID XCCDF: xccdf_org.ssgproject.content_rule_package_pam_pwquality_installed
+   Severidad: MEDIUM
+   Titulo: Install pam_pwquality Package
+   Descripcion: The libpam-pwquality package can be installed with the following command:
+
+$ apt-get install libpam-pwquality
+   Referencias normativas:
+     - SRG-OS-000480-GPOS-00225 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cgeneral-purpose-os)
+     - 5.3.1.3 (https://www.cisecurity.org/benchmark/ubuntu_linux/)
+     - UBTU-22-215010 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cunix-linux)
+     - SV-260478r991587_rule (https://www.cyber.mil/stigs/srg-stig-tools/)
+     - V-260478 (https://www.cyber.mil/stigs/srg-stig-tools#vulnerability_id)
+
+================================================================================
+2. ID XCCDF: xccdf_org.ssgproject.content_rule_use_pam_wheel_group_for_su
+   Severidad: MEDIUM
+   Titulo: Enforce Usage of pam_wheel with Group Parameter for su Authentication
+   Descripcion: To ensure that only users who are members of the group set in the group option of
+pam_wheel.so module can run commands with altered privileges through the su
+command, make sure that the following line
+   Referencias normativas:
+     - 5.2.7 (https://www.cisecurity.org/benchmark/ubuntu_linux/)
+     - 2.2.6 (https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf)
+     - 2.2 (https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf)
+
+================================================================================
+3. ID XCCDF: xccdf_org.ssgproject.content_rule_accounts_umask_etc_bashrc
+   Severidad: MEDIUM
+   Titulo: Ensure the Default Bash Umask is Set Correctly
+   Descripcion: To ensure the default umask for users of the Bash shell is set properly,
+add or correct the umask setting in /etc/bash.bashrc to read
+as follows:
+umask
+   Referencias normativas:
+     - 18 (https://www.cisecurity.org/controls/)
+     - APO13.01 (https://www.isaca.org/resources/cobit)
+     - BAI03.01 (https://www.isaca.org/resources/cobit)
+     - BAI03.02 (https://www.isaca.org/resources/cobit)
+     - BAI03.03 (https://www.isaca.org/resources/cobit)
+     - 4.3.4.3.3 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - A.14.1.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.14.2.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.14.2.5 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.6.1.5 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - CIP-003-8 R5.1.1 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-003-8 R5.3 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-004-6 R2.3 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R2.1 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R2.2 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R2.3 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R5.1 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R5.1.1 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R5.1.2 (https://www.nerc.com/standards/reliability-standards/cip)
+     - AC-6(1) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - CM-6(a) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - PR.IP-2 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - SRG-OS-000480-GPOS-00228 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cgeneral-purpose-os)
+     - SRG-OS-000480-GPOS-00227 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cgeneral-purpose-os)
+     - R36 (https://cyber.gouv.fr/sites/default/files/document/linux_configuration-en-v2.pdf)
+     - 5.4.3.3 (https://www.cisecurity.org/benchmark/ubuntu_linux/)
+
+================================================================================
+4. ID XCCDF: xccdf_org.ssgproject.content_rule_accounts_umask_etc_profile
+   Severidad: MEDIUM
+   Titulo: Ensure the Default Umask is Set Correctly in /etc/profile
+   Descripcion: To ensure the default umask controlled by /etc/profile is set properly,
+add or correct the umask setting in /etc/profile to read as follows:
+umask 
+         
+
+Note that /etc/profile also reads scripts
+   Referencias normativas:
+     - 18 (https://www.cisecurity.org/controls/)
+     - APO13.01 (https://www.isaca.org/resources/cobit)
+     - BAI03.01 (https://www.isaca.org/resources/cobit)
+     - BAI03.02 (https://www.isaca.org/resources/cobit)
+     - BAI03.03 (https://www.isaca.org/resources/cobit)
+     - 4.3.4.3.3 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - A.14.1.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.14.2.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.14.2.5 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.6.1.5 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - CIP-003-8 R5.1.1 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-003-8 R5.3 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-004-6 R2.3 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R2.1 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R2.2 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R2.3 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R5.1 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R5.1.1 (https://www.nerc.com/standards/reliability-standards/cip)
+     - CIP-007-3 R5.1.2 (https://www.nerc.com/standards/reliability-standards/cip)
+     - AC-6(1) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - CM-6(a) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - PR.IP-2 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - SRG-OS-000480-GPOS-00228 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cgeneral-purpose-os)
+     - SRG-OS-000480-GPOS-00227 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cgeneral-purpose-os)
+     - R36 (https://cyber.gouv.fr/sites/default/files/document/linux_configuration-en-v2.pdf)
+     - 5.4.3.3 (https://www.cisecurity.org/benchmark/ubuntu_linux/)
+
+================================================================================
+5. ID XCCDF: xccdf_org.ssgproject.content_rule_file_permissions_ungroupowned
+   Severidad: MEDIUM
+   Titulo: Ensure All Files Are Owned by a Group
+   Descripcion: If any file is not group-owned by a valid defined group, the cause of the lack of
+group-ownership must be investigated. Following this, those files should be deleted or
+assigned to an appropriate grou
+   Referencias normativas:
+     - 1 (https://www.cisecurity.org/controls/)
+     - 11 (https://www.cisecurity.org/controls/)
+     - 12 (https://www.cisecurity.org/controls/)
+     - 13 (https://www.cisecurity.org/controls/)
+     - 14 (https://www.cisecurity.org/controls/)
+     - 15 (https://www.cisecurity.org/controls/)
+     - 16 (https://www.cisecurity.org/controls/)
+     - 18 (https://www.cisecurity.org/controls/)
+     - 3 (https://www.cisecurity.org/controls/)
+     - 5 (https://www.cisecurity.org/controls/)
+     - APO01.06 (https://www.isaca.org/resources/cobit)
+     - DSS05.02 (https://www.isaca.org/resources/cobit)
+     - DSS05.04 (https://www.isaca.org/resources/cobit)
+     - DSS05.05 (https://www.isaca.org/resources/cobit)
+     - DSS05.07 (https://www.isaca.org/resources/cobit)
+     - DSS05.10 (https://www.isaca.org/resources/cobit)
+     - DSS06.02 (https://www.isaca.org/resources/cobit)
+     - DSS06.03 (https://www.isaca.org/resources/cobit)
+     - DSS06.06 (https://www.isaca.org/resources/cobit)
+     - DSS06.10 (https://www.isaca.org/resources/cobit)
+     - 4.3.3.2.2 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.5.1 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.5.2 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.5.3 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.5.4 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.5.5 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.5.6 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.5.7 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.5.8 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.1 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.2 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.3 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.4 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.5 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.6 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.7 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.8 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.6.9 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.7.1 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.7.2 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.7.3 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - 4.3.3.7.4 (https://www.isa.org/products/isa-62443-2-1-2009-security-for-industrial-automat)
+     - SR 1.1 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.10 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.11 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.12 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.13 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.2 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.3 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.4 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.5 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.6 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.7 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.8 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 1.9 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 2.1 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 2.2 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 2.3 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 2.4 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 2.5 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 2.6 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 2.7 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - SR 5.2 (https://www.isa.org/products/ansi-isa-62443-3-3-99-03-03-2013-security-for-indu)
+     - A.10.1.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.11.1.4 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.11.1.5 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.11.2.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.13.1.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.13.1.3 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.13.2.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.13.2.3 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.13.2.4 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.14.1.2 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.14.1.3 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.18.1.4 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.6.1.2 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.7.1.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.7.1.2 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.7.3.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.8.2.2 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.8.2.3 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.1.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.1.2 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.2.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.2.2 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.2.3 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.2.4 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.2.6 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.3.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.4.1 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.4.2 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.4.3 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.4.4 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - A.9.4.5 (https://www.iso.org/contents/data/standard/05/45/54534.html)
+     - CM-6(a) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - AC-6(1) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - PR.AC-1 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - PR.AC-4 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - PR.AC-6 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - PR.AC-7 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - PR.DS-5 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - PR.PT-3 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - SRG-OS-000480-GPOS-00227 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cgeneral-purpose-os)
+     - R53 (https://cyber.gouv.fr/sites/default/files/document/linux_configuration-en-v2.pdf)
+     - 7.1.12 (https://www.cisecurity.org/benchmark/ubuntu_linux/)
+     - 2.2.6 (https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf)
+     - 2.2 (https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf)
+
+================================================================================
+6. ID XCCDF: xccdf_org.ssgproject.content_rule_permissions_local_var_log
+   Severidad: MEDIUM
+   Titulo: Verify permissions of log files
+   Descripcion: Any operating system providing too much information in error messages
+risks compromising the data and security of the structure, and content
+of error messages needs to be carefully considered by the o
+   Referencias normativas:
+     - SI-11(a) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - SI-11(b) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - SI-11.1(iii) (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf)
+     - PR.AC-4 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - PR.DS-5 (https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
+     - SRG-OS-000205-GPOS-00083 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cgeneral-purpose-os)
+     - 6.2.2.1 (https://www.cisecurity.org/benchmark/ubuntu_linux/)
+     - 10.3.1 (https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf)
+     - 10.3 (https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf)
+     - UBTU-22-232026 (https://www.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cunix-linux)
+     - SV-260489r1134796_rule (https://www.cyber.mil/stigs/srg-stig-tools/)
+     - V-260489 (https://www.cyber.mil/stigs/srg-stig-tools#vulnerability_id)
+
